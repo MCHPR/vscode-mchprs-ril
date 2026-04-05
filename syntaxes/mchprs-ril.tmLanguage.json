@@ -61,7 +61,7 @@
       "patterns": [
         {
           "name": "keyword.control.mchprs-ril",
-          "match": "\\b(?:repeater|torch|comparator|lamp|button|lever|pressure_plate|trapdoor|note_block)\\b"
+          "match": "\\b(?:repeater|torch|comparator|lamp|button|lever|pressure_plate|trapdoor|note_block|wire|constant)\\b"
         }
       ]
     },
@@ -70,7 +70,7 @@
       "patterns": [
         {
           "name": "constant.language.mchprs-ril",
-          "match": "\\b(?:none|wire|constant|harp|basedrum|snare|hat|bass|flute|bell|guitar|chime|xylophone|iron_xylophone|cow_bell|didgeridoo|bit|banjo|pling|true|false|compare|subtract)\\b"
+          "match": "\\b(?:none|harp|basedrum|snare|hat|bass|flute|bell|guitar|chime|xylophone|iron_xylophone|cow_bell|didgeridoo|bit|banjo|pling|true|false|compare|subtract)\\b"
         }
       ]
     },
