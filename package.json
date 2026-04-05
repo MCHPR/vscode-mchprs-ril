@@ -3,6 +3,7 @@
   "displayName": "MCHPRS RIL",
   "description": "Language support for MCHPRS RIL",
   "version": "0.0.1",
+  "repository": "github.com:MCHPR/vscode-mchprs-ril",
   "engines": {
     "vscode": "^1.110.0"
   },
