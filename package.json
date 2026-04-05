@@ -1,0 +1,25 @@
+{
+  "name": "mchprs-ril",
+  "displayName": "MCHPRS RIL",
+  "description": "Language support for MCHPRS RIL",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.110.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mchprs-ril",
+      "aliases": ["MCHPRS RIL", "mchprs-ril"],
+      "extensions": [".ril"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mchprs-ril",
+      "scopeName": "source.mchprs-ril",
+      "path": "./syntaxes/mchprs-ril.tmLanguage.json"
+    }]
+  }
+}

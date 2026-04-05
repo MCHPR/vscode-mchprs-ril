@@ -1,0 +1,141 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "MCHPRS RIL",
+  "scopeName": "source.mchprs-ril",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#global-items" },
+    { "include": "#component-keywords" },
+    { "include": "#operand-keywords" },
+    { "include": "#typed-variables" },
+    { "include": "#variables" },
+    { "include": "#numbers" },
+    { "include": "#brackets" },
+    { "include": "#operator" },
+    { "include": "#delimiter" },
+    { "include": "#invalid-identifiers" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.mchprs-ril",
+          "match": "#.*$"
+        }
+      ]
+    },
+
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.mchprs-ril",
+          "begin": "\"",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.string.begin.mchprs-ril" }
+          },
+          "end": "\"",
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.string.end.mchprs-ril" }
+          },
+          "patterns": [
+            {
+              "name": "constant.character.escape.mchprs-ril",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+
+    "global-items": {
+      "patterns": [
+        {
+          "name": "storage.type.mchprs-ril",
+          "match": "\\b(?:circuit|backend_circuit|test|test_args|schematic)\\b"
+        }
+      ]
+    },
+
+    "component-keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.mchprs-ril",
+          "match": "\\b(?:repeater|torch|comparator|lamp|button|lever|pressure_plate|trapdoor|note_block)\\b"
+        }
+      ]
+    },
+
+    "operand-keywords": {
+      "patterns": [
+        {
+          "name": "constant.language.mchprs-ril",
+          "match": "\\b(?:none|wire|constant|harp|basedrum|snare|hat|bass|flute|bell|guitar|chime|xylophone|iron_xylophone|cow_bell|didgeridoo|bit|banjo|pling|true|false|compare|subtract)\\b"
+        }
+      ]
+    },
+
+    "typed-variables": {
+      "patterns": [
+        {
+          "name": "entity.name.type.mchprs-ril",
+          "match": "@\\w+"
+        }
+      ]
+    },
+
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.mchprs-ril",
+          "match": "%\\w+"
+        }
+      ]
+    },
+
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.mchprs-ril",
+          "match": "\\b\\d+\\b"
+        }
+      ]
+    },
+
+    "brackets": {
+      "patterns": [
+        {
+          "name": "punctuation.section.brackets.mchprs-ril",
+          "match": "[{}()\\[\\]]"
+        }
+      ]
+    },
+
+    "operator": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assignment.mchprs-ril",
+          "match": "="
+        }
+      ]
+    },
+
+    "delimiter": {
+      "patterns": [
+        {
+          "name": "punctuation.separator.mchprs-ril",
+          "match": "[,:]"
+        }
+      ]
+    },
+
+    "invalid-identifiers": {
+      "patterns": [
+        {
+          "name": "invalid.illegal.identifier.mchprs-ril",
+          "match": "\\b[a-z_$][A-Za-z0-9_$]*\\b"
+        }
+      ]
+    }
+  }
+}
